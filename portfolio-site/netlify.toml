@@ -1,0 +1,6 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+# The Next.js Runtime is automatically provided by Netlify out of the box.
+# You do not need to manually install @netlify/plugin-nextjs.
