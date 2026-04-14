@@ -1,0 +1,3 @@
+[build]
+  base = "portfolio-site"
+  command = "npm run build"
