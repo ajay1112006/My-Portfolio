@@ -6,8 +6,8 @@
   --muted: #a1a1a1;
   --surface: #151515;
   --surface-soft: #242424;
-  --accent: #b3b3b3;
-  --accent-2: #7f7f7f;
+  --accent: #5227FF;
+  --accent-2: #FF9FFC;
 }
 
 @theme inline {
@@ -53,11 +53,9 @@ button,
 }
 
 .glass {
-  background: linear-gradient(
-    130deg,
-    rgba(255, 255, 255, 0.1),
-    rgba(255, 255, 255, 0.02)
-  );
+  background: linear-gradient(130deg,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.02));
   border: 1px solid rgba(255, 255, 255, 0.16);
   backdrop-filter: blur(8px);
 }
@@ -68,16 +66,16 @@ button,
 
 .glow-btn {
   box-shadow:
-    0 0 0 1px rgba(200, 200, 200, 0.25),
-    0 0 18px rgba(200, 200, 200, 0.35),
-    0 0 36px rgba(130, 130, 130, 0.25);
+    0 0 0 1px rgba(82, 39, 255, 0.25),
+    0 0 18px rgba(82, 39, 255, 0.35),
+    0 0 36px rgba(255, 159, 252, 0.25);
 }
 
 .glow-btn:hover {
   box-shadow:
-    0 0 0 1px rgba(225, 225, 225, 0.55),
-    0 0 22px rgba(225, 225, 225, 0.6),
-    0 0 44px rgba(160, 160, 160, 0.4);
+    0 0 0 1px rgba(82, 39, 255, 0.55),
+    0 0 22px rgba(82, 39, 255, 0.6),
+    0 0 44px rgba(255, 159, 252, 0.4);
 }
 
 .border-glow-card {
@@ -107,7 +105,7 @@ button,
 
 .border-glow-card::before,
 .border-glow-card::after,
-.border-glow-card > .edge-light {
+.border-glow-card>.edge-light {
   content: "";
   position: absolute;
   inset: 0;
@@ -118,7 +116,7 @@ button,
 
 .border-glow-card:not(:hover):not(.sweep-active)::before,
 .border-glow-card:not(:hover):not(.sweep-active)::after,
-.border-glow-card:not(:hover):not(.sweep-active) > .edge-light {
+.border-glow-card:not(:hover):not(.sweep-active)>.edge-light {
   opacity: 0;
   transition: opacity 0.75s ease-in-out;
 }
@@ -138,13 +136,11 @@ button,
     var(--gradient-base, linear-gradient(#b5b5b5 0 100%)) border-box;
   opacity: calc((var(--edge-proximity) - var(--color-sensitivity)) / (100 - var(--color-sensitivity)));
   mask-image:
-    conic-gradient(
-      from var(--cursor-angle) at center,
+    conic-gradient(from var(--cursor-angle) at center,
       black calc(var(--cone-spread) * 1%),
       transparent calc((var(--cone-spread) + 15) * 1%),
       transparent calc((100 - var(--cone-spread) - 15) * 1%),
-      black calc((100 - var(--cone-spread)) * 1%)
-    );
+      black calc((100 - var(--cone-spread)) * 1%));
 }
 
 .border-glow-card::after {
@@ -171,7 +167,7 @@ button,
   mix-blend-mode: soft-light;
 }
 
-.border-glow-card > .edge-light {
+.border-glow-card>.edge-light {
   inset: calc(var(--glow-padding) * -1);
   pointer-events: none;
   z-index: 1;
@@ -180,7 +176,7 @@ button,
   mix-blend-mode: plus-lighter;
 }
 
-.border-glow-card > .edge-light::before {
+.border-glow-card>.edge-light::before {
   content: "";
   position: absolute;
   inset: var(--glow-padding);
