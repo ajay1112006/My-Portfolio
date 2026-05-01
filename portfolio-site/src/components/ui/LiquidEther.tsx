@@ -634,9 +634,9 @@ export default function LiquidEther({
       mouse!: THREE.Mesh;
       constructor(simProps: any) {
         super({ output: simProps.dst });
-        this.init(simProps);
+        this.setup(simProps);
       }
-      init(simProps: any) {
+      setup(simProps: any) {
         super.init();
         const mouseG = new THREE.PlaneGeometry(1, 1);
         const mouseM = new THREE.RawShaderMaterial({
