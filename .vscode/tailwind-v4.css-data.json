@@ -1,0 +1,27 @@
+{
+  "version": 1.1,
+  "atDirectives": [
+    {
+      "name": "@theme",
+      "description": "Define your design tokens using CSS variables.",
+      "references": [
+        {
+          "name": "Tailwind CSS Documentation",
+          "url": "https://tailwindcss.com/docs/v4-beta#css-first-configuration"
+        }
+      ]
+    },
+    {
+      "name": "@utility",
+      "description": "Define custom utilities."
+    },
+    {
+      "name": "@variant",
+      "description": "Define custom variants."
+    },
+    {
+      "name": "@plugin",
+      "description": "Register a plugin."
+    }
+  ]
+}
