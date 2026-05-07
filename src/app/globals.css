@@ -28,10 +28,25 @@ body {
   cursor: none;
 }
 
+/* Global cursor reset to ensure only custom cursor shows */
+* {
+  cursor: none !important;
+}
+
+/* Allow text selection cursor for inputs/textareas if you add them later */
+input, textarea {
+  cursor: text !important;
+}
+
 a,
 button,
-[role="button"] {
-  cursor: none;
+img,
+svg,
+[role="button"],
+.cursor-pointer,
+.border-glow-card,
+.glass {
+  cursor: none !important;
 }
 
 * {
